@@ -13,7 +13,7 @@ Header.defaultProps = {
   branding: "Contact Manager"
 };
 
-Header.PropTypes = {
+Header.propTypes = {
   branding: PropTypes.string.isRequired
 };
 
