@@ -2,9 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Header = props => {
+  const headerStyle = { color: "red", fontSize: "40px" };
+
   return (
     <div>
-      <h1 style={{ color: "red", fontSize: "40px" }}>{props.branding}</h1>
+      <h1 style={headerStyle}>{props.branding}</h1>
     </div>
   );
 };
