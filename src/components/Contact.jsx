@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 class Contact extends Component {
-  onShowClick = name => {
-    console.log(name);
-  };
+  onShowClick = e => {};
 
   render() {
     const { name, email, phone } = this.props.contact;
@@ -12,11 +10,7 @@ class Contact extends Component {
     return (
       <div className="card card-body mb-3">
         <h4>
-          {name}{" "}
-          <i
-            className="fas fa-sort-down"
-            onClick={this.onShowClick.bind(this, name)}
-          />
+          {name} <i className="fas fa-sort-down" onClick={this.onShowClick} />
         </h4>
         <ul className="list-group">
           <li className="list-group-item">Email: {email}</li>
