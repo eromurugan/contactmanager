@@ -13,11 +13,7 @@ class App extends Component {
           email="eromurugan@gmail.com"
           phone="555-555-5555"
         />
-        <Contact
-          name="Priya Singaram"
-          email="eropriya@gmail.com"
-          phone="666-666-6666"
-        />
+        <Contact email="eropriya@gmail.com" phone="666-666-6666" />
       </div>
     );
   }
