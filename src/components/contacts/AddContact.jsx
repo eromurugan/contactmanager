@@ -13,7 +13,7 @@ class AddContact extends Component {
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });
 
-  onSubmit = (dispath, e) => {
+  onSubmit = async (dispath, e) => {
     e.preventDefault();
 
     const { name, email, phone } = this.state;
@@ -36,10 +36,13 @@ class AddContact extends Component {
 
     const newContact = { name, email, phone };
 
+    const res = await axios.post(
+      "https://jsonplaceholder.typicode.com/users",
+      newContact
+    );
+
     // Call Dispatch to add the new contact to list.
-    axios
-      .post("https://jsonplaceholder.typicode.com/users", newContact)
-      .then(res => dispath({ type: "ADD_CONTACT", payload: res.data }));
+    dispath({ type: "ADD_CONTACT", payload: res.data });
 
     // Clear the state after adding contact to list,
     this.setState({ name: "", email: "", phone: "", errors: {} });
