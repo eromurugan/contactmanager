@@ -13,7 +13,14 @@ class Contacts extends Component {
             <Contact key={contact.id} contact={contact} />
           );
 
-          return <React.Fragment>{contacts.map(mapContact)}</React.Fragment>;
+          return (
+            <React.Fragment>
+              <h1 className="display-4 mb-2">
+                <span className="text-danger">Contact List</span>
+              </h1>
+              {contacts.map(mapContact)}
+            </React.Fragment>
+          );
         }}
       </Consumer>
     );
