@@ -41,6 +41,9 @@ class AddContact extends Component {
 
     // Clear the state after adding contact to list,
     this.setState({ name: "", email: "", phone: "", errors: {} });
+
+    //Redirect to home/contact list page
+    this.props.history.push("/");
   };
 
   render() {
